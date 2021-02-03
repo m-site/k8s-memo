@@ -1,12 +1,12 @@
 # k8s-memo
 
-## Create container image
+## Create a container image
 ```
 cd ${DockerImageName_DIR}
 docker build ${DockerImageName} .
 ```
 
-## Check container image
+## Check a container image
 ```
 docker run -d --rm ${DockerImageName} ${ContainerName(Option)} 
 docker exec -it ${ContainerName} bash
@@ -20,22 +20,22 @@ git push
 ```
 
 ## TIPS
-### Delete all exited container
+### Delete all containers in exited.
 ```
 docker container prune
 ```
 
-### Delete all container (including running containers)
+### Delete all containers (including containers in using)
 ```
 docker rm -f $(docker ps -a -q)
 ```
 
-### Delete all unused container image
+### Delete all container-images in not using
 ```
 docker image prune
 ```
 
-### Delete all container image(including images in use)
+### Delete all container-images (including images in using)
 ```
 docker rmi $(docker images -q) -f
 ```
