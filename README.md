@@ -25,7 +25,7 @@ git push
 docker container prune
 ```
 
-### Delete all container (including running container)
+### Delete all container (including running containers)
 ```
 docker rm -f $(docker ps -a -q)
 ```
@@ -35,7 +35,7 @@ docker rm -f $(docker ps -a -q)
 docker image prune
 ```
 
-### Delete all container image(including using image)
+### Delete all container image(including images in use)
 ```
 docker rmi $(docker images -q) -f
 ```
