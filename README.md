@@ -3,7 +3,7 @@
 ## Create a container image
 ```
 cd ${DockerImageName_DIR}
-docker build ${DockerImageName} .
+docker build -t ${DockerImageName} .
 ```
 
 ## Check a container image
