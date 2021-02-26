@@ -1,25 +1,28 @@
 # k8s-memo
 
-## Create a container image
+## How to build container image
+
+### Create a container image
 ```
 cd ${DockerImageName_DIR}
 docker build -t ${DockerImageName} .
 ```
 
-## Check a container image
+### Check a container image
 ```
 docker run -d --rm ${DockerImageName} ${ContainerName(Option)} 
 docker exec -it ${ContainerName} bash
 docker stop ${ContainerName}
 ```
 
-## git commit
+### git commit (work with DockerHub)
 ```
 git commit -am "${Comment}"
 git push
 ```
 
 ## TIPS(docker)
+
 ### Delete all containers in exited.
 ```
 docker container prune
