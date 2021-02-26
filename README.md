@@ -2,9 +2,17 @@
 
 ## How to build container image
 
+### Create Github Repository
+```
+(create Github repo)
+cd ${GIT_DIR}
+git clone ${REPO_URL}
+```
+
 ### Create a container image
 ```
 cd ${DockerImageName_DIR}
+(create Dockerfile)
 docker build -t ${DockerImageName} .
 ```
 
