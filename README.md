@@ -39,3 +39,39 @@ docker image prune
 ```
 docker rmi $(docker images -q) -f
 ```
+
+### Install kubectl
+```
+sudo apt install kubectl
+echo 'alias k="kubectl"'
+```
+
+### KUBECONFIG switching settings
+```
+# Install direnv
+sudo apt install direnv
+
+# Create a directory with the target ns name
+mkdir ${NS_DIR}
+
+# Download and Copy kubeconfig file
+e.g. cp kubeconfig.yaml ${NS_DIR}/.
+
+# Create .envrc
+echo 'export KUBECONFING=${NS_DIR}/kubeconfig.yaml' > ${NS_DIR}/.envrc
+
+# Check direnv setting
+cd ${NS_DIR}
+ or
+re-login
+
+direnv allow
+
+# Check kubectl context
+kubectl config current-context
+ or
+kubectl config get-contexts
+
+# Check the name of the Namespace you are accessing
+kubectl get ns
+```
