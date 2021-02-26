@@ -19,7 +19,7 @@ git commit -am "${Comment}"
 git push
 ```
 
-## TIPS
+## TIPS(docker)
 ### Delete all containers in exited.
 ```
 docker container prune
@@ -40,6 +40,7 @@ docker image prune
 docker rmi $(docker images -q) -f
 ```
 
+## TIPS(kubectl)
 ### Install kubectl
 ```
 sudo apt install kubectl
