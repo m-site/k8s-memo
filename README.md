@@ -52,10 +52,14 @@ docker rmi $(docker images -q) -f
 ```
 
 ## TIPS(kubectl)
-### Install kubectl
+### Install kubectl(Ubuntu20)
 ```
+sudo apt-get update && sudo apt-get install -y apt-transport-https gnupg2
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+sudo apt-get update
 sudo apt install kubectl
-echo 'alias k="kubectl"'
+echo 'alias k="kubectl"' >> ~/.bashrc
 ```
 
 ### KUBECONFIG switching settings
