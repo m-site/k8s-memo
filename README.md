@@ -74,9 +74,11 @@ mkdir ${NS_DIR}
 e.g. cp kubeconfig.yaml ${NS_DIR}/.
 
 # Create .envrc
+echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
 echo 'export KUBECONFING=${NS_DIR}/kubeconfig.yaml' > ${NS_DIR}/.envrc
 
 # Check direnv setting
+source ~/.bashrc
 cd ${NS_DIR}
  or
 re-login
